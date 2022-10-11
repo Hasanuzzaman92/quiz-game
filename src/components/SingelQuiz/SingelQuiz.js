@@ -3,14 +3,15 @@ import { Link } from 'react-router-dom';
 
 const SingelQuiz = ({topic}) => {
     const {id, name, logo, total} = topic;
+    console.log(topic)
     return (
         <div>
           <div className=" border transition-shadow duration-300 bg-white rounded shadow-sm">
-          <img
-            src={logo ? logo : '../../../public/not-found-imag.jpg'}
-            className="object-cover w-full h-64"
-            alt=""
-          />
+            <img
+              src={logo}
+              className="object-cover w-full h-64 bg-gray-200"
+              alt=""
+            />
           <div className="p-5 border border-t-0">
             <h2 className="inline-block mb-3 text-2xl font-bold leading-5 transition-colors duration-200 hover:text-deep-purple-accent-700"
             >
