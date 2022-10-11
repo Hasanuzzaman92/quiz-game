@@ -1,10 +1,48 @@
 import React from 'react';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
-const QuizOption = ({option}) => {
-    console.log(option)
+const QuizOption = ({option, correctAnswer}) => {
+    const notify = () => {
+        // correctAnswer === option ? toast("Wow correct ans!") : toast("ish.. wrong ans! ")
+        correctAnswer === option ? toast.success('Wow correct ans!', {
+            position: "top-right",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "colored",
+            })
+            : toast.error('ops, wrong ans!', {
+                position: "top-right",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "colored",
+                });
+    };
+
+    
     return (
         <div>
-            <li className='p-2'><input type="radio" value={option} name='name'/> {option} </li>
+            <li onClick={notify} className='bg-yellow-100 p-4'><input type="radio" value={option} name='name'/> {option} </li>
+            <ToastContainer
+        position="top-right"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="colored"
+/>
         </div>
     );
 };
