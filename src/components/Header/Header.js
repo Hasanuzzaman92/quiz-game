@@ -35,14 +35,14 @@ const Header = () => {
             </li>
             <li>
               <NavLink
-                to="/quiz"
+                to="/quizs"
                 aria-label="Quiz"
                 title="Quiz"
                 className= {({isActive}) => isActive ? 'font-bold tracking-wide text-blue-700 underline transition-colors duration-200 hover:text-deep-purple-accent-400'
                 : 'font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400'
               }
               >
-                Quiz
+                Quizs
               </NavLink>
             </li>
             <li>
@@ -140,14 +140,14 @@ const Header = () => {
                         </li>
                         <li>
                         <NavLink
-                            to="/quiz"
+                            to="/quizs"
                             aria-label="Quiz"
                             title="Quiz"
                             className= {({isActive}) => isActive ? 'font-bold tracking-wide text-blue-700 underline transition-colors duration-200 hover:text-deep-purple-accent-400'
                             : 'font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400'
                           }
                         >
-                            Quiz
+                            Quizs
                         </NavLink>
                         </li>
                         <li>

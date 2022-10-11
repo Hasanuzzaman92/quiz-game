@@ -1,6 +1,6 @@
 import React from 'react';
 import Lottie from 'lottie-react';
-import quizProgram from '../../assest/quizProgram.json'
+import quizProgram from '../../assest/quizProgram.json';
 import { Link } from 'react-router-dom';
 
 const Home = () => {
