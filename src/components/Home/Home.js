@@ -2,10 +2,12 @@ import React from 'react';
 import Lottie from 'lottie-react';
 import quizProgram from '../../assest/quizProgram.json';
 import { Link } from 'react-router-dom';
+import HomeStats from './HomeStats';
 
 const Home = () => {
     return (
-        <div className='px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-24'>
+        <div>
+          <div className='px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-24'>
         <div className='flex flex-col items-center justify-between lg:flex-row'>
         <div className='mb-10 lg:max-w-lg  lg:pr-5 lg:mb-0'>
           <div className='max-w-xl mb-6 lg:mt-8'>
@@ -23,12 +25,12 @@ const Home = () => {
             </p>
           </div>
           
-          <div className='flex flex-col items-center md:flex-row'>
+          <div className='flex flex-col justify-center items-center md:flex-row'>
             <Link
               to='/quizs'
-              className='flex items-center justify-center sm:w-full md:w-full h-12 px-6 mb-3 font-medium text-white transition duration-200 rounded shadow-md md:mb-0 bg-blue-400 hover:bg-blue-700 focus:shadow-outline focus:outline-none'
+              className='flex items-center justify-center sm:w-full md:w-[50%] lg:w-[50%] h-12 px-6 mb-3 font-medium text-white transition duration-200 rounded shadow-md md:mb-0 bg-blue-400 hover:bg-blue-700 focus:shadow-outline focus:outline-none'
             >
-              <span className='mr-3'>Start quiz</span>
+              <span className='mr-3 justify-center'>Start quiz</span>
               
             </Link>
           </div>
@@ -40,6 +42,8 @@ const Home = () => {
         </div>
       </div>
     </div>
+      <HomeStats></HomeStats>
+        </div>
     );
 };
 
